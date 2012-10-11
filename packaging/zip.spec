@@ -11,14 +11,6 @@ Summary:        File compression program
 Url:            http://www.info-zip.org/
 Group:          Productivity/Archiving/Compression
 Source:         %{name}-%{version}.tar.bz2
-Patch2:         zip-3.0-iso8859_2.patch
-Patch3:         zip-3.0-add_options_to_help.patch
-Patch4:         zip-3.0-nonexec-stack.patch
-Patch5:         zip-3.0-optflags.patch
-Patch6:         zip-3.0-tempfile.patch
-Patch7:         zip-notimestamp.patch
-Provides:       crzip
-Obsoletes:      crzip
 
 %description
 Zip is a compression and file packaging utility. It is compatible with
@@ -26,12 +18,6 @@ PKZIP(tm) 2.04g (Phil Katz ZIP) for MS-DOS systems.
 
 %prep
 %setup -q -n zip%{file_version}
-%patch2
-%patch3
-%patch4
-%patch5
-%patch6
-%patch7
 
 %build
 make %{?_smp_mflags} -f unix/Makefile prefix=/usr CC="gcc %{optflags} -DLARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64" generic_gcc
