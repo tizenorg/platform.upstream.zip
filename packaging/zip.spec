@@ -2,7 +2,6 @@ Name:           zip
 Version:        3.0
 Release:        1
 License:        BSD-3-Clause
-%define file_version 30
 Summary:        File compression program
 Url:            http://www.info-zip.org/
 Group:          Productivity/Archiving/Compression
@@ -13,7 +12,7 @@ Zip is a compression and file packaging utility. It is compatible with
 PKZIP(tm) 2.04g (Phil Katz ZIP) for MS-DOS systems.
 
 %prep
-%setup -q -n zip%{file_version}
+%setup -q -n zip30
 
 %build
 make %{?_smp_mflags} -f unix/Makefile prefix=/usr CC="gcc %{optflags} -DLARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64" generic_gcc
