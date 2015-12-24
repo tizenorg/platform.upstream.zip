@@ -1,7 +1,7 @@
 Name:           zip
 Version:        3.0
 Release:        1
-License:        BSD-3-Clause
+License:        BSD-2.0
 Summary:        File compression program
 Url:            http://www.info-zip.org/
 Group:          Productivity/Archiving/Compression
