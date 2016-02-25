@@ -17,7 +17,7 @@ PKZIP(tm) 2.04g (Phil Katz ZIP) for MS-DOS systems.
 cp %{SOURCE1001} .
 
 %build
-make %{?_smp_mflags} -f unix/Makefile prefix=/usr CC="gcc %{optflags} -DLARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64" generic_gcc
+make %{?_smp_mflags} -f unix/Makefile prefix=/usr CC="gcc %{optflags} -DLARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fvisibility=hidden -flto" generic_gcc
 
 %install
 mkdir -p %{buildroot}/usr/bin
